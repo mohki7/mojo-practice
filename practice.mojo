@@ -1,13 +1,8 @@
+from python import Python
+
+
 fn main():
-    var a = 1
-    var b = 2
-    let c = add_inout(a, b)
+    let np = Python.import_module("numpy")
+    # このnumpyを読み込めない。エラーになる。なんで？？？
+    let a = np.array([1, 2, 3])
     print(a)
-    print(b)
-    print(c)
-
-
-fn add_inout(owned x: Int, owned y: Int) -> Int:
-    x += 1
-    y += 1
-    return x + y
